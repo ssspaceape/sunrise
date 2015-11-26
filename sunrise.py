@@ -16,7 +16,7 @@ height         = 32  # types (incl. tiling).  Other code may need tweaks.
 # ------------Image Block---------------------
 image       = Image.new('RGB', (64, 32))
 draw        = ImageDraw.Draw(image)
-rows = 32
+registerows = 32
 chains = 2
 parallel = 1
 matrix = RGBMatrix(rows, chains, parallel)
@@ -88,11 +88,11 @@ while poop < 300:
 	poop += 1
 	#print poop
 	sunrise_lw.colorinc()
-	sunrise_lw.draw()
+	#sunrise_lw.draw()
 	#print sunrise_lw.color
 
 	sunrise_es.colorinc()
-	sunrise_es.draw()
+	#sunrise_es.draw()
 
 	
 
@@ -108,6 +108,8 @@ while poop < 300:
 		prevTime = time.time()
 
 # ------------Image Block---------------------
+	matrix.Fill(sunrise_lw.color)
+
 	## Offscreen buffer is copied to screen
-	matrix.SetImage(image.im.id, 0, 0)
+	#matrix.SetImage(image.im.id, 0, 0)
 # ------------Image Block---------------------
