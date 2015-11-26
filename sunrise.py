@@ -109,8 +109,10 @@ while poop < 300:
 		prevTime = time.time()
 
 # ------------Image Block---------------------
-	matrix.Fill(sunrise_lw.color)
-
+	#matrix.Fill(sunrise_lw.color)
+	matrix.Fill(sunrise_lw.color[0].sunrise_lw.color[1],sunrise_lw.color[2])
+	#print sunrise_lw.color
+	#print sunrise_lw.color[0]
 	## Offscreen buffer is copied to screen
 	#matrix.SetImage(image.im.id, 0, 0)
 # ------------Image Block---------------------
