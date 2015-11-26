@@ -6,10 +6,7 @@ import math
 import numpy
 from PIL import Image
 from PIL import ImageDraw
-
-# ------------Image Block---------------------
-from rgbmatrix import Adafruit_RGBmatrix
-# ------------Image Block---------------------
+from rgbmatrix import RGBMatrix
 
 fps            = 8 # Scrolling speed (ish)
 prevTime       = time.time()
@@ -19,7 +16,10 @@ height         = 32  # types (incl. tiling).  Other code may need tweaks.
 # ------------Image Block---------------------
 image       = Image.new('RGB', (64, 32))
 draw        = ImageDraw.Draw(image)
-matrix      = Adafruit_RGBmatrix(32, 2)
+ows = 32
+chains = 2
+parallel = 1
+matrix = RGBMatrix(rows, chains, parallel)
 
 
 def clearOnExit():
