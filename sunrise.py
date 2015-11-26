@@ -110,7 +110,7 @@ while poop < 300:
 
 # ------------Image Block---------------------
 	#matrix.Fill(sunrise_lw.color)
-	matrix.Fill(sunrise_lw.color[0].sunrise_lw.color[1],sunrise_lw.color[2])
+	matrix.Fill(sunrise_lw.color[0],sunrise_lw.color[1],sunrise_lw.color[2])
 	#print sunrise_lw.color
 	#print sunrise_lw.color[0]
 	## Offscreen buffer is copied to screen
