@@ -8,7 +8,7 @@ from PIL import Image
 from PIL import ImageDraw
 from rgbmatrix import RGBMatrix
 
-fps            = 8 # Scrolling speed (ish)
+fps            = 1 # Scrolling speed (ish)
 prevTime       = time.time()
 width          = 32  # Matrix size (pixels) -- change for different matrix
 height         = 32  # types (incl. tiling).  Other code may need tweaks.
@@ -39,7 +39,7 @@ class sun:
 		self.panel = panelno
 		self.location = [0,0,0,0]
 		self.step = 0 #so each sun can track its own state
-		self.maxstep = 255
+		self.maxstep = 254
 		#this bit is basically a conviluted way to initialize where the sun is (if it's sun 0 spawn in panel 0, ect)
 		if self.panel == 0:
 			self.location = [0,0,31,31]
