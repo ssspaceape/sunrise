@@ -16,7 +16,8 @@ height         = 32  # types (incl. tiling).  Other code may need tweaks.
 # ------------Image Block---------------------
 image       = Image.new('RGB', (64, 32))
 draw        = ImageDraw.Draw(image)
-registerows = 32
+
+rows = 32
 chains = 2
 parallel = 1
 matrix = RGBMatrix(rows, chains, parallel)
