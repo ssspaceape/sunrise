@@ -62,12 +62,14 @@ class sun:
 			colorvalr = ratecalcsin(float(self.step),self.maxstep)
 			colorvalg = int(float(self.step)/self.maxstep*255)
 			if self.step > int(float(self.maxstep)/4):
-				colorvalb = 4*int(float(self.step-int(float(self.maxstep)/4))/self.maxstep*255 - .75*255)
-			elif 
+				colorvalb = int(float(self.step-int(float(self.maxstep)/4))/self.maxstep*255)
 			else: 
 				colorvalb = 0
-			self.color = (colorvalr,colorvalg,colorvalb)
-			#print self.color
+			if colorvalb < 256 and colorvalr < 256 and colorvalg < 256:
+				self.color = (colorvalr,colorvalg,colorvalb)
+				print self.color
+			else:
+				pass
 	def draw(self):
 		draw.rectangle((self.location), fill=self.color)
 
