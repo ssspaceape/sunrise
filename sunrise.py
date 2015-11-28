@@ -94,7 +94,6 @@ while poop < 300:
 	sunrise_es.colorinc()
 	#sunrise_es.draw()
 	matrix.Fill(sunrise_lw.color[0],sunrise_lw.color[1],sunrise_lw.color[2])
-		pass
 	
 	
 
