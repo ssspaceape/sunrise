@@ -8,7 +8,7 @@ from PIL import Image
 from PIL import ImageDraw
 from rgbmatrix import RGBMatrix
 
-fps            = 2 # Scrolling speed (ish)
+fps            = 1 # Scrolling speed (ish)
 prevTime       = time.time()
 width          = 32  # Matrix size (pixels) -- change for different matrix
 height         = 32  # types (incl. tiling).  Other code may need tweaks.
@@ -84,8 +84,8 @@ sunrise_es = sun(1)
 #state = 4
 #while state == 4:
 poop = 0
-matrix.Fill(255,255,255)
-time.sleep(1)
+#matrix.Fill(255,255,255)
+#x`time.sleep(1)
 while poop < 300:
 # ------------Image Block---------------------
 	# Clear background
