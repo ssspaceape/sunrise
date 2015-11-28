@@ -86,7 +86,6 @@ while poop < 300:
 # ------------Image Block---------------------
 	
 	poop += 1
-	if :
 	#print poop
 	sunrise_lw.colorinc()
 	#sunrise_lw.draw()
