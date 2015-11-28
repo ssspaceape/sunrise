@@ -62,7 +62,8 @@ class sun:
 			colorvalr = ratecalcsin(float(self.step),self.maxstep)
 			colorvalg = int(float(self.step)/self.maxstep*255)
 			if self.step > int(float(self.maxstep)/4):
-				colorvalb = 4*int(float(self.step-int(float(self.maxstep)/4))/self.maxstep*255)
+				colorvalb = 4*int(float(self.step-int(float(self.maxstep)/4))/self.maxstep*255 - .75*255)
+			elif 
 			else: 
 				colorvalb = 0
 			self.color = (colorvalr,colorvalg,colorvalb)
