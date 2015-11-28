@@ -8,7 +8,7 @@ from PIL import Image
 from PIL import ImageDraw
 from rgbmatrix import RGBMatrix
 
-fps            = 1 # Scrolling speed (ish)
+fps            = 8 # Scrolling speed (ish)
 prevTime       = time.time()
 width          = 32  # Matrix size (pixels) -- change for different matrix
 height         = 32  # types (incl. tiling).  Other code may need tweaks.
@@ -39,7 +39,7 @@ class sun:
 		self.panel = panelno
 		self.location = [0,0,0,0]
 		self.step = 0 #so each sun can track its own state
-		self.maxstep = 254
+		self.maxstep = 253
 		#this bit is basically a conviluted way to initialize where the sun is (if it's sun 0 spawn in panel 0, ect)
 		if self.panel == 0:
 			self.location = [0,0,31,31]
@@ -58,7 +58,6 @@ class sun:
 			#colorval = int(round(255*math.sin(math.radians((90*(self.step/self.maxstep))))))
 			# this is a shitty hack to make it get gradually more yellow
 			colorvalr = ratecalcsin(float(self.step),self.maxstep)
-			#print colorvalr
 			colorvalg = int(float(self.step)/self.maxstep*255)
 			if self.step > int(float(self.maxstep)/4):
 				colorvalb = 4*int(float(self.step-int(float(self.maxstep)/4))/self.maxstep*255)
@@ -87,6 +86,7 @@ while poop < 300:
 # ------------Image Block---------------------
 	
 	poop += 1
+	if :
 	#print poop
 	sunrise_lw.colorinc()
 	#sunrise_lw.draw()
@@ -94,7 +94,9 @@ while poop < 300:
 
 	sunrise_es.colorinc()
 	#sunrise_es.draw()
-
+	matrix.Fill(sunrise_lw.color[0],sunrise_lw.color[1],sunrise_lw.color[2])
+		pass
+	
 	
 
 #Timing 
@@ -110,7 +112,7 @@ while poop < 300:
 
 # ------------Image Block---------------------
 	#matrix.Fill(sunrise_lw.color)
-	matrix.Fill(sunrise_lw.color[0],sunrise_lw.color[1],sunrise_lw.color[2])
+
 	#print sunrise_lw.color
 	#print sunrise_lw.color[0]
 	## Offscreen buffer is copied to screen
