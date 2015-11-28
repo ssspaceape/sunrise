@@ -48,8 +48,8 @@ class sun:
 		else:
 			self.location = [0,0,0,0]
 	def colorinc(self):
-		print 'self.step is:'
-		print self.step
+		#print 'self.step is:'
+		#print self.step
 		if self.step == self.maxstep:
 			pass
 		elif self.step >= 0 and self.step < self.maxstep:
@@ -82,7 +82,7 @@ sunrise_es = sun(1)
 #while state == 4:
 poop = 0
 matrix.Fill(255,255,255)
-time.sleep(100)
+time.sleep(1)
 while poop < 300:
 # ------------Image Block---------------------
 	# Clear background
@@ -98,6 +98,8 @@ while poop < 300:
 
 	sunrise_es.colorinc()
 	#sunrise_es.draw()
+	print "sunrise_lw.color is:"
+	print sunrise_lw.color
 	matrix.Fill(sunrise_lw.color[0],sunrise_lw.color[1],sunrise_lw.color[2])
 	
 	
