@@ -39,7 +39,7 @@ class sun:
 		self.panel = panelno
 		self.location = [0,0,0,0]
 		self.step = 0 #so each sun can track its own state
-		self.maxstep = 220
+		self.maxstep = 109
 		#this bit is basically a conviluted way to initialize where the sun is (if it's sun 0 spawn in panel 0, ect)
 		if self.panel == 0:
 			self.location = [0,0,31,31]
@@ -81,6 +81,8 @@ sunrise_es = sun(1)
 #state = 4
 #while state == 4:
 poop = 0
+matrix.Fill(255,255,255)
+time.sleep(100)
 while poop < 300:
 # ------------Image Block---------------------
 	# Clear background
