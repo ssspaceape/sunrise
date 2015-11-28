@@ -48,6 +48,8 @@ class sun:
 		else:
 			self.location = [0,0,0,0]
 	def colorinc(self):
+		print 'self.step is:'
+		print self.step
 		if self.step == self.maxstep:
 			pass
 		elif self.step >= 0 and self.step < self.maxstep:
@@ -86,7 +88,8 @@ while poop < 300:
 # ------------Image Block---------------------
 	
 	poop += 1
-	#print poop
+	print "poop is:"
+	print poop
 	sunrise_lw.colorinc()
 	#sunrise_lw.draw()
 	#print sunrise_lw.color
